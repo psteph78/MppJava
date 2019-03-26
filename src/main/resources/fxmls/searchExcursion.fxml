@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerSearchExcursion">
+   <children>
+      <TableView fx:id="excursionTableView" layoutX="1.0" layoutY="65.0" prefHeight="251.0" prefWidth="612.0">
+        <columns>
+          <TableColumn fx:id="landmarkColumn" prefWidth="102.0" text="Landmark" />
+          <TableColumn fx:id="leavingHourColumn" prefWidth="122.0" text="Leaving Hour" />
+            <TableColumn fx:id="availablePlacesColumn" minWidth="5.0" prefWidth="136.0" text="Available Places" />
+            <TableColumn fx:id="transportCompanyColumn" maxWidth="200.0" minWidth="0.0" prefWidth="161.0" text="Transport Company" />
+            <TableColumn fx:id="priceColumn" minWidth="0.0" prefWidth="90.0" text="Price" />
+        </columns>
+      </TableView>
+      <Label layoutX="23.0" layoutY="27.0" text="Landmark:" />
+      <Label layoutX="257.0" layoutY="27.0" text="Departure between:" />
+      <Label layoutX="448.0" layoutY="27.0" text="and" />
+      <TextField fx:id="landmarkField" layoutX="114.0" layoutY="22.0" prefHeight="31.0" prefWidth="118.0" />
+      <TextField fx:id="startIntervalField" layoutX="396.0" layoutY="22.0" prefHeight="31.0" prefWidth="43.0" />
+      <TextField fx:id="endIntervalField" layoutX="483.0" layoutY="22.0" prefHeight="31.0" prefWidth="43.0" />
+      <AnchorPane layoutX="7.0" layoutY="316.0" prefHeight="234.0" prefWidth="606.0">
+         <children>
+            <Label layoutX="13.0" layoutY="4.0" text="Book excursion for client:" />
+            <Label layoutX="13.0" layoutY="44.0" text="Information about client:" />
+            <Label layoutX="21.0" layoutY="70.0" text="Last Name:" />
+            <Label layoutX="20.0" layoutY="107.0" text="First Name:" />
+            <Label layoutX="20.0" layoutY="144.0" text="Telephone Number:" />
+            <TextField fx:id="lastNameField" layoutX="169.0" layoutY="65.0" prefHeight="31.0" prefWidth="112.0" />
+            <TextField fx:id="firstNameField" layoutX="169.0" layoutY="102.0" prefHeight="31.0" prefWidth="112.0" />
+            <TextField fx:id="telephoneNrField" layoutX="169.0" layoutY="144.0" prefHeight="31.0" prefWidth="112.0" />
+            <Button fx:id="bookButton" layoutX="225.0" layoutY="188.0" mnemonicParsing="false" onAction="#bookExcursion" text="Book Excursion" />
+            <Label layoutX="319.0" layoutY="66.0" text="Nr of tickets:" />
+            <TextField fx:id="nrTicketsField" layoutX="416.0" layoutY="65.0" prefHeight="31.0" prefWidth="74.0" />
+         </children>
+      </AnchorPane>
+      <TextArea fx:id="bookingTextArea" layoutX="-2.0" layoutY="551.0" prefHeight="72.0" prefWidth="614.0" />
+      <Button fx:id="searchExcursionButton" layoutX="536.0" layoutY="22.0" mnemonicParsing="false" onAction="#searchExcursions" text="Search" />
+      <Button fx:id="logOutButton" onAction="#logOut" layoutX="536.0" layoutY="587.0" mnemonicParsing="false" text="Log Out" />
+   </children>
+</AnchorPane>
